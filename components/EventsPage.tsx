@@ -16,30 +16,13 @@ interface EventItem {
 
 const EVENTS: EventItem[] = [
   {
-    id: 1,
-    title: "Black Friday Sales Extravaganza",
-    date: "Friday, Nov 29",
-    time: "6:00 AM - 11:00 PM",
-    location: "Entire Mall (Floors 1-3)",
-    description: "A mall-wide savings event featuring massive discounts from apparel, electronics, specialty stores, and anchor tenants. Don't miss the biggest shopping day of the year!",
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop",
-    type: "sale",
-    highlights: [
-      "Target & Dillard's Doorbusters",
-      "Ashley HomeStore Furniture Deals",
-      "Apple Store Tech Specials",
-      "H&M & Aeropostale Fashion Steals",
-      "TemmyStore Exclusive Merch Drops"
-    ]
-  },
-  {
     id: 2,
     title: "Temmy Park Christmas Market",
     date: "Thanksgiving Day → Dec 24",
     time: "Special Holiday Hours",
     location: "Outdoor Parking Lot (Festive Tented Market Area)",
     description: "Experience the magic of our open-air holiday market featuring snow-dusted vendor stalls, red-and-white canopies, and warm golden string lights. Browse handmade gifts and enjoy seasonal treats in a festive outdoor ambiance.",
-    image: "https://images.unsplash.com/photo-1543095824-2878b264281d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=2069&auto=format&fit=crop", // Real winter market image
     type: "market",
     stands: [
       "Hickory Farms Holiday Kiosk",
@@ -59,7 +42,7 @@ const EVENTS: EventItem[] = [
     time: "11:00 AM - 10:00 PM",
     location: "Grubhouse (Floor 1, Near Main Entrance)",
     description: "Grubhouse will be one of the only tenants open during Thanksgiving and Christmas. Enjoy a full sit-down holiday meal including roasted turkey, seasonal sides, and warm festive drinks. Perfect for families, travelers, and guests visiting the Christmas Market.",
-    image: "https://images.unsplash.com/photo-1544025162-d76690b67f61?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1574672280602-959b4c56c69b?q=80&w=2069&auto=format&fit=crop", // Real roast turkey dinner image
     type: "dining",
     highlights: [
       "Roasted Turkey Dinner",
@@ -70,37 +53,44 @@ const EVENTS: EventItem[] = [
     ]
   },
   {
+    id: 1,
+    title: "Black Friday Sales Extravaganza",
+    date: "Friday, Nov 29",
+    time: "6:00 AM - 11:00 PM",
+    location: "Entire Mall (Floors 1-3)",
+    description: "A mall-wide savings event featuring massive discounts from apparel, electronics, specialty stores, and anchor tenants. Don't miss the biggest shopping day of the year!",
+    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop",
+    type: "sale",
+    highlights: [
+      "Target & Dillard's Doorbusters",
+      "Ashley HomeStore Furniture Deals",
+      "Apple Store Tech Specials",
+      "H&M & Aeropostale Fashion Steals",
+      "TemmyStore Exclusive Merch Drops"
+    ]
+  },
+  {
     id: 3,
     title: "Holiday Meet & Greets",
     date: "Daily in December",
     time: "12:00 PM - 6:00 PM",
     location: "Floor 2 – Event Court",
-    description: "Bring the family for photos and fun! Meet seasonal characters and Temmy-affiliated mascots in our specially designed holiday zone.",
+    description: "Bring the family for photos and fun! Enjoy a character-free festive atmosphere designed for the perfect holiday photo op.",
     image: "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=2000&auto=format&fit=crop",
     type: "family",
     highlights: [
       "Decorated Photo Zone",
       "Holiday Backdrop",
-      "Character Schedule at Guest Services"
+      "Guest Services Info"
     ]
-  },
-  {
-    id: 4,
-    title: "Winter Crafts Workshop",
-    date: "Saturdays in December",
-    time: "2:00 PM - 4:00 PM",
-    location: "Floor 1 – Community Room",
-    description: "A kid-friendly workshop teaching ornament-making and simple winter crafts. All materials provided free of charge!",
-    image: "https://images.unsplash.com/photo-1460500063983-994d4c27756c?q=80&w=2000&auto=format&fit=crop",
-    type: "workshop"
   }
 ];
 
 export const EventsPage: React.FC = () => {
   return (
-    <div className="bg-slate-50 min-h-screen animate-in fade-in duration-500">
+    <div className="bg-slate-50 min-h-screen animate-in fade-in duration-500 pt-20">
       {/* Hero Header */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=2000&auto=format&fit=crop" 
@@ -110,24 +100,21 @@ export const EventsPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/50 to-slate-50"></div>
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/20 border border-red-400/30 backdrop-blur-md text-red-100 text-xs font-bold uppercase tracking-widest mb-6 shadow-lg">
             <Sparkles size={14} className="text-amber-300" /> Seasonal Celebration
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight drop-shadow-xl">
             Exciting Events <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-red-200 to-amber-200">
               All Season Long
             </span>
           </h1>
-          <p className="text-xl text-slate-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-            From massive sales to cozy community markets and exclusive character meet-and-greets, there's something for everyone at Temmy Park Mall.
-          </p>
         </div>
       </section>
 
       {/* Events Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-20 pb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-20 pb-20">
         <div className="grid gap-10">
           {EVENTS.map((event) => (
             <div key={event.id} className="group bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col lg:flex-row hover:shadow-2xl transition-shadow duration-300">
@@ -144,11 +131,6 @@ export const EventsPage: React.FC = () => {
                 {event.type === 'sale' && (
                   <div className="absolute bottom-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-bounce">
                     Don't Miss Out!
-                  </div>
-                )}
-                {event.type === 'dining' && (
-                   <div className="absolute bottom-4 right-4 bg-amber-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                    Reserve a Table
                   </div>
                 )}
               </div>
@@ -181,22 +163,7 @@ export const EventsPage: React.FC = () => {
                    </div>
                 )}
 
-                {/* Specialized Content based on Type */}
-                {event.type === 'sale' && event.highlights && (
-                  <div className="bg-red-50 border border-red-100 rounded-xl p-5">
-                    <h4 className="font-bold text-red-700 mb-3 flex items-center gap-2">
-                      <ShoppingBag size={18} /> Doorbuster Deals Include:
-                    </h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {event.highlights.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-slate-700">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full"></span> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
+                {/* Type Specific Render */}
                 {event.type === 'dining' && event.highlights && (
                   <div className="bg-amber-50 border border-amber-100 rounded-xl p-5">
                     <h4 className="font-bold text-amber-800 mb-3 flex items-center gap-2">
@@ -225,26 +192,6 @@ export const EventsPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                )}
-
-                {event.type === 'family' && (
-                  <div className="bg-blue-50 border border-blue-100 rounded-xl p-5 flex flex-col sm:flex-row gap-4 items-center justify-between">
-                    <div>
-                       <h4 className="font-bold text-blue-800 mb-1 flex items-center gap-2">
-                        <Users size={18} /> Meet & Greet
-                      </h4>
-                      <p className="text-sm text-blue-700">Capture magical moments with our holiday cast.</p>
-                    </div>
-                    <button className="px-5 py-2 bg-blue-600 text-white text-sm font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors cursor-not-allowed opacity-80">
-                      View Schedule (Soon)
-                    </button>
-                  </div>
-                )}
-                
-                {event.type === 'workshop' && (
-                   <div className="mt-2 inline-flex items-center gap-2 text-sm text-slate-500">
-                      <AlertCircle size={16} /> Free entry. First come, first served.
-                   </div>
                 )}
               </div>
             </div>

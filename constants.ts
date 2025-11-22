@@ -8,67 +8,67 @@ export const CATEGORIES = [
 
 export const STORE_DATA: Store[] = [
   // Anchor Stores
-  { name: "Target", category: "Anchor", domain: "target.com", featured: true, description: "Expect More. Pay Less." },
-  { name: "Dillard's", category: "Anchor", domain: "dillards.com", featured: true, description: "The Style of Your Life." },
-  { name: "Ashley HomeStore", category: "Anchor", domain: "ashleyfurniture.com", description: "Home Furniture & Decor." },
+  { name: "Target", category: "Anchor", domain: "target.com", featured: true, description: "Expect More. Pay Less.", floor: "1" },
+  { name: "Dillard's", category: "Anchor", domain: "dillards.com", featured: true, description: "The Style of Your Life.", floor: "1" },
+  { name: "Ashley HomeStore", category: "Anchor", domain: "ashleyfurniture.com", description: "Home Furniture & Decor.", floor: "2" },
 
   // Apparel
-  { name: "H&M", category: "Apparel", domain: "hm.com" },
-  { name: "Prada", category: "Apparel", domain: "prada.com", featured: true },
-  { name: "Victoria's Secret & Pink", category: "Apparel", domain: "victoriassecret.com" },
-  { name: "Hollister", category: "Apparel", domain: "hollisterco.com" },
-  { name: "Buckle", category: "Apparel", domain: "buckle.com" },
-  { name: "Aeropostale", category: "Apparel", domain: "aeropostale.com" },
-  { name: "American Eagle", category: "Apparel", domain: "ae.com" },
-  { name: "Gap", category: "Apparel", domain: "gap.com" },
+  { name: "H&M", category: "Apparel", domain: "hm.com", floor: "1" },
+  { name: "Prada", category: "Apparel", domain: "prada.com", featured: true, floor: "2" },
+  { name: "Victoria's Secret & Pink", category: "Apparel", domain: "victoriassecret.com", floor: "2" },
+  { name: "Hollister", category: "Apparel", domain: "hollisterco.com", floor: "1" },
+  { name: "Buckle", category: "Apparel", domain: "buckle.com", floor: "2" },
+  { name: "Aeropostale", category: "Apparel", domain: "aeropostale.com", floor: "1" },
+  { name: "American Eagle Outfitters", category: "Apparel", domain: "ae.com", floor: "1" },
+  { name: "Gap", category: "Apparel", domain: "gap.com", floor: "1" },
 
   // Children
-  { name: "Miniso", category: "Children's", domain: "miniso.com" },
-  { name: "Build-A-Bear", category: "Children's", domain: "buildabear.com" },
-  { name: "Carter's", category: "Children's", domain: "carters.com" },
+  { name: "Miniso", category: "Children's", domain: "miniso.com", floor: "1" },
+  { name: "Build-A-Bear Workshop", category: "Children's", domain: "buildabear.com", floor: "1" },
+  { name: "Carter's Babies & Kids", category: "Children's", domain: "carters.com", floor: "1" },
 
   // Food & Drink
-  { name: "Crumbl Cookies", category: "Food & Drink", domain: "crumblcookies.com", featured: true },
-  { name: "Starbucks", category: "Food & Drink", domain: "starbucks.com" },
-  { name: "Grubhouse", category: "Food & Drink", domain: "grubhub.com" }, // Placeholder domain
-  { name: "Baskin Robbins", category: "Food & Drink", domain: "baskinrobbins.com" },
-  { name: "Temmy Park Café", category: "Food & Drink", description: "Exclusive to Riverside Estates." },
-  { name: "Sweet Bites Candy", category: "Food & Drink", description: "Local favorite." },
-  { name: "Panda Express", category: "Food & Drink", domain: "pandaexpress.com" },
-  { name: "Sbarro", category: "Food & Drink", domain: "sbarro.com" },
-  { name: "McDonald's", category: "Food & Drink", domain: "mcdonalds.com" },
-  { name: "Chick-fil-A", category: "Food & Drink", domain: "chick-fil-a.com" },
-  { name: "Auntie Anne's", category: "Food & Drink", domain: "auntieannes.com" },
+  { name: "Crumbl Cookies", category: "Food & Drink", domain: "crumblcookies.com", featured: true, floor: "1" },
+  { name: "Starbucks", category: "Food & Drink", domain: "starbucks.com", floor: "1" },
+  { name: "Grubhouse", category: "Food & Drink", domain: "grubhub.com", floor: "1", description: "Casual Dining" },
+  { name: "Baskin Robbins", category: "Food & Drink", domain: "baskinrobbins.com", floor: "Food Court" },
+  { name: "Temmy Park Café", category: "Food & Drink", description: "Exclusive to Riverside Estates.", floor: "2" },
+  { name: "Sweet Bites Candy", category: "Food & Drink", description: "Local favorite.", floor: "1" },
+  { name: "Panda Express", category: "Food & Drink", domain: "pandaexpress.com", floor: "Food Court" },
+  { name: "Sbarro", category: "Food & Drink", domain: "sbarro.com", floor: "Food Court" },
+  { name: "McDonald's", category: "Food & Drink", domain: "mcdonalds.com", floor: "Food Court" },
+  { name: "Chick-fil-A", category: "Food & Drink", domain: "chick-fil-a.com", floor: "Food Court" },
+  { name: "Auntie Anne's", category: "Food & Drink", domain: "auntieannes.com", floor: "1" },
 
   // Books
-  { name: "Barnes & Noble", category: "Books", domain: "barnesandnoble.com" },
+  { name: "Barnes & Noble", category: "Books", domain: "barnesandnoble.com", floor: "2" },
 
   // Health & Beauty
-  { name: "Bath & Body Works", category: "Health & Beauty", domain: "bathandbodyworks.com" },
-  { name: "Sephora", category: "Health & Beauty", domain: "sephora.com", featured: true },
+  { name: "Bath & Body Works", category: "Health & Beauty", domain: "bathandbodyworks.com", floor: "1" },
+  { name: "Sephora", category: "Health & Beauty", domain: "sephora.com", featured: true, floor: "1" },
 
   // Sports
-  { name: "Journeys", category: "Sports", domain: "journeys.com" },
-  { name: "JD Sports", category: "Sports", domain: "jdsports.com" },
+  { name: "Journeys", category: "Sports", domain: "journeys.com", floor: "1" },
+  { name: "JD Sports", category: "Sports", domain: "jdsports.com", floor: "1" },
 
   // Electronics
-  { name: "GameStop", category: "Electronics", domain: "gamestop.com" },
-  { name: "Apple Store", category: "Electronics", domain: "apple.com", featured: true },
+  { name: "GameStop", category: "Electronics", domain: "gamestop.com", floor: "2" },
+  { name: "Apple Store", category: "Electronics", domain: "apple.com", featured: true, floor: "1" },
 
   // Specialty
-  { name: "Kay Jewelers", category: "Specialty", domain: "kay.com" },
-  { name: "Hot Topic", category: "Specialty", domain: "hottopic.com" },
-  { name: "Five Below", category: "Specialty", domain: "fivebelow.com" },
-  { name: "TemmyStore", category: "Specialty", description: "The original classic.", customLogoType: "temmy-store" },
-  { name: "Yankee Candle", category: "Specialty", domain: "yankeecandle.com" },
+  { name: "Kay Jewelers", category: "Specialty", domain: "kay.com", floor: "2" },
+  { name: "Hot Topic", category: "Specialty", domain: "hottopic.com", floor: "1" },
+  { name: "Five Below", category: "Specialty", domain: "fivebelow.com", floor: "1" },
+  { name: "TemmyStore", category: "Specialty", description: "The original classic.", customLogoType: "temmy-store", floor: "1" },
+  { name: "Yankee Candle", category: "Specialty", domain: "yankeecandle.com", floor: "1" },
 
   // Entertainment
-  { name: "Temmyem World", category: "Entertainment", description: "Theme park fun." },
-  { name: "Temmy Cinema", category: "Entertainment", description: "IMAX Experience." },
-  { name: "Arcade Machines", category: "Entertainment", description: "Retro gaming." },
+  { name: "Temmyem World", category: "Entertainment", description: "Indoor Playground", floor: "3" },
+  { name: "Temmy Cinema", category: "Entertainment", description: "IMAX Experience", floor: "3" },
+  { name: "Arcade Machines", category: "Entertainment", description: "Retro gaming", floor: "3" },
 
   // Services
-  { name: "Sunglass Hut", category: "Services", domain: "sunglasshut.com" },
-  { name: "Photo Booth", category: "Services", description: "Capture the memory." },
-  { name: "ATM", category: "Services", description: "Banking." },
+  { name: "Sunglass Hut", category: "Services", domain: "sunglasshut.com", floor: "1" },
+  { name: "Photo Booth", category: "Services", description: "Capture the memory.", floor: "Corridors" },
+  { name: "ATM", category: "Services", description: "Banking.", floor: "All Floors" },
 ];

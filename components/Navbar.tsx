@@ -18,37 +18,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
   const handleNavigation = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
-    
-    if (href.startsWith('#')) {
-      // If we are not on home and click an anchor, go home first then scroll
-      if (currentPage !== 'home' && onNavigate) {
-        onNavigate('home');
-        // Small timeout to allow render before scrolling
-        setTimeout(() => {
-          const element = document.querySelector(href);
-          element?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        // Standard anchor scroll
-        const element = document.querySelector(href);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // Page switch
-      if (onNavigate) {
-        onNavigate(href);
-        window.scrollTo(0, 0);
-      }
+    if (onNavigate) {
+      onNavigate(href);
+      window.scrollTo(0, 0);
     }
     setIsOpen(false);
   };
 
   const links = [
-    { name: "Directory", href: "#directory" },
-    { name: "Events", href: "events" }, // Added Events
+    { name: "Directory", href: "home" },
+    { name: "Food Court", href: "food-court" },
+    { name: "Cinema", href: "cinema" },
+    { name: "Events", href: "events" },
+    { name: "Map", href: "map" },
+    { name: "Amenities", href: "amenities" },
     { name: "History", href: "history" },
-    { name: "Map", href: "#location" },
-    { name: "Visit", href: "#hours" },
+    { name: "Contact", href: "contact" }
   ];
 
   return (
@@ -72,16 +57,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden lg:flex space-x-6 items-center">
           {links.map((link) => {
-            const isActive = (link.href === currentPage) || (currentPage === 'home' && link.href === '#directory' && false); // Simple active check
-            const isPageActive = link.name.toLowerCase() === currentPage;
-
+            const isPageActive = link.href === currentPage;
             return (
               <a
                 key={link.name}
-                href={link.href}
-                className={`text-sm font-medium uppercase tracking-wider hover:text-blue-500 transition-colors relative group ${isPageActive ? 'text-blue-600' : ''}`}
+                href={`#${link.href}`}
+                className={`text-xs font-bold uppercase tracking-wider hover:text-blue-500 transition-colors relative group ${isPageActive ? 'text-blue-600' : ''}`}
                 onClick={(e) => handleNavigation(e, link.href)}
               >
                 {link.name}
@@ -92,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -101,12 +84,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-5 fade-in duration-300 h-screen">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-5 fade-in duration-300 h-screen">
           <div className="px-4 pt-4 pb-8 space-y-2">
             {links.map((link) => (
               <a
                 key={link.name}
-                href={link.href}
+                href={`#${link.href}`}
                 onClick={(e) => handleNavigation(e, link.href)}
                 className="block px-4 py-3 text-lg font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
               >

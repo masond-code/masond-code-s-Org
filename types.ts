@@ -19,6 +19,7 @@ export interface Store {
   description?: string;
   featured?: boolean;
   customLogoType?: 'temmy-store'; // Added for custom CSS logos
+  floor?: string; // '1', '2', '3', 'UG'
 }
 
 export interface GeneratedImage {
