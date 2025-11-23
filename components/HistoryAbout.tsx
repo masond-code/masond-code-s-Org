@@ -136,7 +136,7 @@ export const HistoryAbout: React.FC = () => {
               <div className="text-xs uppercase tracking-wider font-semibold">Floors</div>
             </div>
             <div className="bg-slate-800 p-6 rounded-xl text-center border border-slate-700">
-              <div className="text-3xl font-bold text-white mb-1">38+</div>
+              <div className="text-3xl font-bold text-white mb-1">40+</div>
               <div className="text-xs uppercase tracking-wider font-semibold">Stores</div>
             </div>
             <div className="bg-slate-800 p-6 rounded-xl text-center border border-slate-700">

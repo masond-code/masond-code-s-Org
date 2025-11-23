@@ -21,6 +21,7 @@ export const STORE_DATA: Store[] = [
   { name: "Aeropostale", category: "Apparel", domain: "aeropostale.com", floor: "1" },
   { name: "American Eagle Outfitters", category: "Apparel", domain: "ae.com", floor: "1" },
   { name: "Gap", category: "Apparel", domain: "gap.com", floor: "1" },
+  { name: "Francesca's", category: "Apparel", domain: "francescas.com", floor: "1" },
 
   // Children
   { name: "Miniso", category: "Children's", domain: "miniso.com", floor: "1" },
@@ -46,6 +47,8 @@ export const STORE_DATA: Store[] = [
   // Health & Beauty
   { name: "Bath & Body Works", category: "Health & Beauty", domain: "bathandbodyworks.com", floor: "1" },
   { name: "Sephora", category: "Health & Beauty", domain: "sephora.com", featured: true, floor: "1" },
+  { name: "GNC", category: "Health & Beauty", domain: "gnc.com", floor: "1" },
+  { name: "Thaya Day Spa", category: "Health & Beauty", domain: "thaya.com", description: "Luxury spa services.", floor: "2" },
 
   // Sports
   { name: "Journeys", category: "Sports", domain: "journeys.com", floor: "1" },
